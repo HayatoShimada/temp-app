@@ -1,18 +1,6 @@
 import { Page } from "./components";
 
-
-interface User {
-  id: number;
-  name: string;
-  email: string;
-}
-
-interface HomeProps {
-  users: User[];
-}
-
-
-const Home: React.FC<HomeProps> = ({ users }) => {
+const Home: React.FC = () => {
   return (
     <>
       <Page />
