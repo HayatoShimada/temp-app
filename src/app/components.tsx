@@ -13,7 +13,7 @@ export const Page = async () => {
     <div className="px-4 sm:px-6 lg:px-8">
       <div className="sm:flex sm:items-center">
         <div className="sm:flex-auto">
-          <h1 className="text-base font-semibold leading-6 text-gray-900">
+          <h1 className="pt-10 text-base font-semibold leading-6 text-gray-900">
             温度
           </h1>
           <p className="mt-2 text-sm text-gray-700">
@@ -31,25 +31,25 @@ export const Page = async () => {
                 <tr>
                   <th
                     scope="col"
-                    className="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-0"
+                    className="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 dark:text-white sm:pl-0"
                   >
                     Time
                   </th>
                   <th
                     scope="col"
-                    className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
+                    className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900 dark:text-white "
                   >
                     センサ1
                   </th>
                   <th
                     scope="col"
-                    className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
+                    className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900 dark:text-white"
                   >
                     センサ2
                   </th>
                   <th
                     scope="col"
-                    className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
+                    className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900 dark:text-white"
                   >
                     センサ3
                   </th>
@@ -58,7 +58,7 @@ export const Page = async () => {
               <tbody className="divide-y divide-gray-200">
                 {temps.map((temp) => (
                   <tr key={temp.id}>
-                    <td className="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-0">
+                    <td className="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 dark:text-white sm:pl-0">
                       {new Date(temp.createdAt).toLocaleString()}
                     </td>
                     <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
