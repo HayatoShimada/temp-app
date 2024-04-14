@@ -16,12 +16,8 @@ export const Page = async () => {
           <h1 className="pt-10 text-base font-semibold leading-6 text-gray-900 dark:text-white">
             温度
           </h1>
-          <p className="mt-2 text-sm text-gray-700 dark:text-white">
-            水槽とか
-
-          </p>
+          <p className="mt-2 text-sm text-gray-700 dark:text-white">水槽とか</p>
         </div>
-
       </div>
       <div className="mt-8 flow-root">
         <div className="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
@@ -59,7 +55,9 @@ export const Page = async () => {
                 {temps.map((temp) => (
                   <tr key={temp.id}>
                     <td className="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 dark:text-white sm:pl-0">
-                      {new Date(temp.createdAt).toLocaleString()}
+                      {new Date(temp.createdAt).toLocaleString("ja-JP", {
+                        timeZone: "Asia/Tokyo",
+                      })}
                     </td>
                     <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
                       {temp.temp1}
