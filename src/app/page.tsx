@@ -1,26 +1,11 @@
-// pages/temps.tsx
-import prisma from "@/app/lib/prisma";
-import { Temp } from "@prisma/client";
-import { GetServerSideProps, NextPage } from "next";
+import type { Temp } from '@prisma/client';
 
-interface HomePageProps {
-  temps: Temp[]; // Post 型の配列を想定しています。
+interface PageProps {
+  temps: Temp[];
 }
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
-  const temps: Temp[] = await prisma.temp.findMany({
-    take: 100,
-    orderBy: {
-      createdAt: "desc",
-    },
-  });
 
-  return {
-    props: { temps }, // ページコンポーネントに props として渡されます
-  };
-};
-
-export const Page: NextPage<HomePageProps> = async ({ temps }) => {
+export default function Page({ temps }: PageProps) {
   return (
     <div className="px-4 sm:px-6 lg:px-8">
       <div className="sm:flex sm:items-center">
