@@ -1,11 +1,10 @@
-import type { Temp } from '@prisma/client';
+import type { Temp } from "@prisma/client";
 
 interface PageProps {
   temps: Temp[];
 }
 
-
-export default function Page({ temps }: PageProps) {
+const Page: React.FC<PageProps> = ({ temps }) => {
   return (
     <div className="px-4 sm:px-6 lg:px-8">
       <div className="sm:flex sm:items-center">
@@ -74,4 +73,6 @@ export default function Page({ temps }: PageProps) {
       </div>
     </div>
   );
-};
+}
+
+export default Page;
